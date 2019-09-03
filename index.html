@@ -6,12 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assests/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Crystal Collector Game </title>
 </head>
 <body>
     <!--inset jumbotron or header -->
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Crazy Crystal Game</h1>
+              <p class="lead">Use the 4 crystals below to try and match the target score. Each crystal has a different value each round.</p>
+            </div>
+          </div>
+        
+        </div>
+        
+        <div class="row status">
+        
+            <div class="col-sm-2 match">
+            
+                <p>Match:</p>
+            </div>
+            <div class="col-sm-1" id="randomNumber">
+            </div>
+            
+            
+            <div class="col-sm-1 gameStatistics">
+            
+                <p id="win"></p>
+                <p id="win">Win:</p>
+                <p id="lost">Lost:</p>
+            
+            </div>
+        </div>
+            
+        <div class="row">
+        
+            <img id="gem1" src="assets/images/diamond.jpg" class="image">
+            <img id="gem2" src="assets/images/emerald.jpg" class="image">
+            <img id="gem3" src="assets/images/pink.jpg" class="image">
+            <img id="gem4" src="assets/images/ruby.jpg" class="image">
+        
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-sm-2 score">
+            
+                <p>Your Score is:</p>
+            
+            </div>
+        
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-sm-2 scoreCount" id="score">
+            
+               
+            
+            </div>
+        
+        </div>
     
-
     
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
