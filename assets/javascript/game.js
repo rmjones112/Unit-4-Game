@@ -5,6 +5,9 @@
 //need to create variables for gems, crystal #s randomly generated btw 1-12
 //need reset function at end
 
+//background color 
+document.body.style.backgroundColor = "#ffe6ff" 
+
 //setting values for gemstones
 var gems = {
     diamond:
@@ -36,3 +39,17 @@ var lose= 0;
 var yourscore = 0;
 var goalscore = 0;
 
+//random number generator 19-120 
+function myFunction() {
+    var x = document.getElementById("demo")
+    x.innerHTML = Math.floor((Math.random() * 120) + 19);
+  }
+
+  //start game
+
+
+  //need onclick for clicking on crystals
+
+  //w/l use similar if/else from psychic game 
+
+  //restart game
