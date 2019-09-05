@@ -4,38 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assests/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>Crystal Collector Game </title>
+    <title> Crazy Crystal Game </title>
 </head>
 <body>
-    <!--inset jumbotron or header -->
-    <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Crazy Crystal Game</h1>
-              <p class="lead">Use the 4 crystals below to try and match the target score. Each crystal has a different value each round.</p>
+    
+        <div class="header">
+            
+            <div class="row">
+                <div class="col-sm">
+                    <h1>Crazy Crystals Collector</h1>
+                    
+                </div>
+            
             </div>
-          </div>
+        
+        </div>  
+        
+        <div class="w-50 p-2">
+            <div class="row">
+                <div class="col-sm">
+                
+                    <p>Are you ready for some bling darling?<br><br> Below you'll find 4 crystals and by clicking on a crystal you will add a specific amount of points to your total score.<br><br>You win the game by matching your total score to score to win, you lose the game if your total score goes above the score to win.<br><br>The value of each crystal is hidden from you until you click on it.<br><br>The crystal's values reset every game. Good Luck!
+                    </p>
+                </div>
+            
+            </div>
         
         </div>
         
         <div class="row status">
         
-            <div class="col-sm-2 match">
+            <div class="col-sm-2 scoretowin">
             
-                <p>Match:</p>
+                <p>Score to Win:</p>
             </div>
             <div class="col-sm-1" id="randomNumber">
             </div>
             
             
-            <div class="col-sm-1 gameStatistics">
+            <div class="col-sm-1 gameStats">
             
-                <p id="win"></p>
+                <p id="status"></p>
                 <p id="win">Win:</p>
                 <p id="lost">Lost:</p>
             
@@ -70,8 +85,8 @@
             </div>
         
         </div>
+       
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        </body>
     
-    
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-</body>
-</html>
+    </html>

@@ -1,0 +1,75 @@
+body {
+    
+    background-image: url("../images/bling.jpg");
+    font-family: sans-serif;
+}
+
+.header {
+    
+    margin-left: 10px;
+    background-color: pink;
+    color: white
+    margin-top: 10px;
+    height: 80px;
+    
+}
+
+.w-50 {
+    
+    background-color: pink;
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+   height: 300px;
+    
+}
+
+.scoretowin{
+    
+    background-color: pink;
+    color:black;
+    margin-left: 25px;
+    margin-top: 10px;
+    padding:10px; 
+    height: 120px;
+}
+
+#randomNumber{
+    
+    background-color: pink;
+    margin-top: 10px;
+    padding:10px; 
+    height: 120px;
+}
+
+.gameStats {
+    
+    background-color: pink;
+    margin: 10px;
+    padding-top: 5px;
+    height: 120px;
+}
+
+.image {
+    
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.score{
+    
+    background-color: pink;
+    margin-left: 25px;
+    margin-top: 10px;
+    height: 25px;
+}
+
+.scoreCount {
+    
+    background-color: pink;
+    margin-left: 25px;
+    margin-top: 10px;
+    height: 100px;
+}

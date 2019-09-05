@@ -5,51 +5,114 @@
 //need to create variables for gems, crystal #s randomly generated btw 1-12
 //need reset function at end
 
-//background color 
-document.body.style.backgroundColor = "#ffe6ff" 
+//start game 
+$(document).ready(function() {
 
-//setting values for gemstones
-var gems = {
-    diamond:
-    {
-        name: "diamond",
-        value: 0
-    },
+    //set variables win, lose and score of game 
+    var win = 0;
+    var lose = 0;
+    var score = 0;
 
-    emerald:
-    {
-        name: "emerald",
-        value: 0
-    },
-    pink:
-    {
-        name: "pink",
-        value: 0
-    },
-    ruby:
-    {
-        name: "ruby",
-        value:0
-    }
-};
+// Create random numb generator
+var computerGuess = parseInt(Math.floor(Math.random() * 101) + 19);
+$("#randomNumber").html(computerGuess);
 
-//variables
-var win= 0;
-var lose= 0;
-var yourscore = 0;
-var goalscore = 0;
+//converting the string into integer
+var gem1 = parseInt(Math.floor(Math.random() * 12) + 1);
+var gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
+var gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
+var gem4 = parseInt(Math.floor(Math.random() * 12) + 1);
 
-//random number generator 19-120 
-function myFunction() {
-    var x = document.getElementById("demo")
-    x.innerHTML = Math.floor((Math.random() * 120) + 19);
-  }
+//make reset function
 
-  //start game
+function reset () {
+    
+    score = 0;
+    $("#score").html(score);
+    computerGuess = parseInt(Math.floor(Math.random() * 101) + 19);
+    $("#randomNumber").html(computerGuess);
 
 
-  //need onclick for clicking on crystals
+    gem1 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem4 = parseInt(Math.floor(Math.random() * 12) + 1);
 
-  //w/l use similar if/else from psychic game 
 
-  //restart game
+}
+
+//make images clickable and connected to a random number
+    
+
+$("#gem1").on("click", function() {
+    
+            score = score + gem1;
+            $("#score").html(score);
+            console.log("score1 " + score);
+            if (score == computerGuess) {
+                winnerStatus();
+            }else if (score > computerGuess) {
+                winnerStatus();
+            }
+});
+    
+$("#gem2").on("click", function() {
+    
+            score = score + gem2;
+            $("#score").html(score);
+            console.log("score2 " + score);
+            if (score == computerGuess) {
+                winnerStatus();
+            }else if (score > computerGuess) {
+                winnerStatus();
+            }
+});
+    
+$("#gem3").on("click", function() {
+    
+            score = score + gem3;
+            $("#score").html(score);
+            console.log("score3 " + score);
+            if (score == computerGuess) {
+                winnerStatus();
+            }else if (score > computerGuess) {
+                winnerStatus();
+            }
+});
+
+$("#gem4").on("click", function() {
+    
+            score = score + gem4;
+            $("#score").html(score);
+            console.log("score4 " + score);
+            if (score == computerGuess) {
+                winnerStatus();
+            }else if (score > computerGuess) {
+                winnerStatus();
+            }
+});
+
+    // create Winner or Loser results
+function winnerStatus() {
+    
+    if(score === computerGuess) {
+    
+    win++;
+    console.log(win);
+    $("#status").html("Winner");
+    $("#win").html("win: " +win);
+    reset();
+    alert("Al Davis Said it best, just win baby win!")
+} else if (score > computerGuess) {
+    
+    lose++;
+    console.log(lose);
+    $("#status").html("Loser");
+    $("#lost").html("Lost: " + lose);
+    reset();
+    alert("Oh how unfortunate")
+}
+  
+}
+    
+});
