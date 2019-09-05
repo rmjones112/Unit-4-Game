@@ -23,23 +23,7 @@ var gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
 var gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
 var gem4 = parseInt(Math.floor(Math.random() * 12) + 1);
 
-//make reset function
 
-function reset () {
-    
-    score = 0;
-    $("#score").html(score);
-    computerGuess = parseInt(Math.floor(Math.random() * 101) + 19);
-    $("#randomNumber").html(computerGuess);
-
-
-    gem1 = parseInt(Math.floor(Math.random() * 12) + 1);
-    gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
-    gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
-    gem4 = parseInt(Math.floor(Math.random() * 12) + 1);
-
-
-}
 
 //make images clickable and connected to a random number
     
@@ -49,6 +33,8 @@ $("#gem1").on("click", function() {
             score = score + gem1;
             $("#score").html(score);
             console.log("score1 " + score);
+            
+   //use if/else         
             if (score == computerGuess) {
                 winnerStatus();
             }else if (score > computerGuess) {
@@ -61,6 +47,8 @@ $("#gem2").on("click", function() {
             score = score + gem2;
             $("#score").html(score);
             console.log("score2 " + score);
+           
+        //use if/else   
             if (score == computerGuess) {
                 winnerStatus();
             }else if (score > computerGuess) {
@@ -92,6 +80,25 @@ $("#gem4").on("click", function() {
             }
 });
 
+
+//make reset function
+
+function reset () {
+    
+    score = 0;
+    $("#score").html(score);
+    computerGuess = parseInt(Math.floor(Math.random() * 101) + 19);
+    $("#randomNumber").html(computerGuess);
+
+
+    gem1 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
+    gem4 = parseInt(Math.floor(Math.random() * 12) + 1);
+
+
+}
+
     // create Winner or Loser results
 function winnerStatus() {
     
@@ -102,7 +109,7 @@ function winnerStatus() {
     $("#status").html("Winner");
     $("#win").html("win: " +win);
     reset();
-    alert("Al Davis Said it best, just win baby win!")
+    alert("Al Davis said it best, just win baby win!")
 } else if (score > computerGuess) {
     
     lose++;
