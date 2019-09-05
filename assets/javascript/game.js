@@ -17,7 +17,7 @@ $(document).ready(function() {
 var computerGuess = parseInt(Math.floor(Math.random() * 101) + 19);
 $("#randomNumber").html(computerGuess);
 
-//converting the string into integer
+//converting the string into #
 var gem1 = parseInt(Math.floor(Math.random() * 12) + 1);
 var gem2 = parseInt(Math.floor(Math.random() * 12) + 1);
 var gem3 = parseInt(Math.floor(Math.random() * 12) + 1);
