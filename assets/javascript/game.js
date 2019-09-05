@@ -5,6 +5,8 @@
 //need to create variables for gems, crystal #s randomly generated btw 1-12
 //need reset function at end
 
+//took out background color and added styling to css 
+
 //start game 
 $(document).ready(function() {
 
